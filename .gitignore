@@ -1,3 +1,4 @@
 .envrc
 *.pyc
 .DS_Store
+.vscode
