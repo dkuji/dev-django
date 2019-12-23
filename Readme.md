@@ -22,3 +22,12 @@ $ echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
 $ echo 'layout_pipenv' > .envrc && direnv allow .
 ```
 
+## install yarn
+```
+$ brew install yarn
+```
+
+## install vue
+```
+$ yarn global add @vue/cli
+```
