@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'login',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webpack_loader'
 ]
 
 MIDDLEWARE = [
@@ -119,3 +121,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'login.User'
+
+LOGIN_URL = 'login:login'
+LOGIN_REDIRECT_URL = 'polls:index'
+
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+FRONTEND_DIR = os.path.join(BASE_DIR, '../frontend')
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': DEBUG,
+        'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
+        'STATS_FILE': os.path.join(FRONTEND_DIR, 'webpack-stats.json'),
+    }
+}
