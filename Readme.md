@@ -31,3 +31,17 @@ $ brew install yarn
 ```
 $ yarn global add @vue/cli
 ```
+
+## vue create
+```
+$ vue create frontend
+$ cd frontend
+$ yarn build
+```
+
+## start dev server
+```
+$ python manage.py runserver
+
+$ yarn serve
+```
