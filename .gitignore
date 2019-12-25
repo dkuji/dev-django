@@ -4,3 +4,5 @@
 .vscode/
 node_modules/
 webpack-stats.json
+yarn-error.log
+*/assets/webpack_bundles/

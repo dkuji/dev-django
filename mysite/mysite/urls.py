@@ -19,6 +19,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('polls/', include('polls.urls')),
+    path('login/', include('login.urls')),
     path('admin/', admin.site.urls),
     # path('', include('login.urls'))
     path(

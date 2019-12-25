@@ -127,13 +127,16 @@ AUTH_USER_MODEL = 'login.User'
 LOGIN_URL = 'login:login'
 LOGIN_REDIRECT_URL = 'polls:index'
 
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-FRONTEND_DIR = os.path.join(BASE_DIR, '../frontend')
+# TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': DEBUG,
-        'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
-        'STATS_FILE': os.path.join(FRONTEND_DIR, 'webpack-stats.json'),
+        'BUNDLE_DIR_NAME': '/webpack_bundles/',  # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json')
     }
 }
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'), 
+)
