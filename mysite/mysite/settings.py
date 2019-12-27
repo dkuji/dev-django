@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'login',
+    'test',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -138,5 +139,5 @@ WEBPACK_LOADER = {
 }
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'assets'), 
+    os.path.join(BASE_DIR, 'assets'),
 )

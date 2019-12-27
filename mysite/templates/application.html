@@ -5,20 +5,85 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    -->
     <title>Django Vue Integration</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
   </head>
   <body>
     <noscript>
       <strong>We're sorry but frontend doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <div id="example">
+      <my-component></my-component>
+    </div>
+
+    <!--
 <div id="app">
     <app></app>
+    <v-app>
+    <div>
+      <v-alert type="success">
+        I'm a success alert [[ message ]].
+      </v-alert>
+    </div>
+    </v-app>
 </div>
-{% render_bundle 'app' %}
-<!-- built files will be auto injected -->
+<div id="baseline"><baseline></baseline></div>
+  <div id="app">
+
+  <v-container fluid>
+    <v-layout>
+      <v-flex>
+        <v-card>
+          <v-btn small fab color="info" absolute top right @click=handleSaveButtion>save</v-btn>
+          <v-card-text>
+            <v-textarea label="自由にメモを記載してください。" v-model=memo rows=15 ></v-textarea>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
+
+    <div>
+      <v-alert type="success">
+        I'm a success alert.
+      </v-alert>
   
+      <v-alert type="info">
+        I'm an info alert.
+      </v-alert>
+  
+      <v-alert type="warning">
+        I'm a warning alert.
+      </v-alert>
+  
+      <v-alert type="error">
+        I'm an error alert.
+      </v-alert>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+-->
+{% render_bundle 'main' %}
+<!-- built files will be auto injected -->
+<!--
+  <script>
+    new Vue({
+      delimiters: ['[[', ']]'],
+      //el: '#app',
+      vuetify: new Vuetify(),
+      data: {
+        mesage: "hoge"
+      },
+      render: h => h(HelloWorld),
+    }).$mount('#app')
+  </script>
+-->
 </body>
 </html>

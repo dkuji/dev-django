@@ -26,5 +26,6 @@ urlpatterns = [
         "",
         TemplateView.as_view(template_name="application.html"),
         name="app",
-    )
+    ),
+    path('test/', TemplateView.as_view(template_name="test.html"))
 ]

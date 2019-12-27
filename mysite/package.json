@@ -1,11 +1,26 @@
 {
   "dependencies": {
+    "css-loader": "^3.4.0",
     "vue": "^2.6.11",
+    "vue-loader": "^15.8.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
     "vuetify": "^2.1.15",
+    "vuetify-loader": "^1.4.3",
     "webpack": "^4.41.4",
     "webpack-bundle-tracker": "^0.4.3"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.10"
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "deepmerge": "^4.2.2",
+    "fibers": "^4.0.2",
+    "file-loader": "^5.0.2",
+    "sass": "^1.24.0",
+    "sass-loader": "^8.0.0",
+    "vue-hot-reload-api": "^2.3.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }
